@@ -13,3 +13,23 @@
 .todo-form{
     border: 1px solid red;
 }
+.cardPadding{
+    padding: 7px;
+    display: block;
+}
+
+.listDisplay{
+    display: inline-flex;
+    padding: 5px;
+    margin: 10px;
+}
+.list{
+    list-style: none;
+    padding: 5px;  
+    list-style-type: none; 
+}
+ul li{
+    list-style-type: none;
+
+  }
+  
