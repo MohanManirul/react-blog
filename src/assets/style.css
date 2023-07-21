@@ -1,0 +1,15 @@
+.header{
+    text-align: center;
+}
+.headerDiv{
+    background-color: cadetblue;
+
+}
+
+.todo-left{
+    border: 1px solid blue;
+
+}
+.todo-form{
+    border: 1px solid red;
+}
