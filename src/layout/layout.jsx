@@ -25,12 +25,13 @@ const Layout = (props) => {
                     <li > <NavLink to={'/'}>Home</NavLink></li>
                     {
                        categories.map((item,index) => {
-                        return <li className="list"><NavLink key={index.toString()} to={'/byCategory/'+item['id']}>{item['name']}</NavLink></li>
+                        return <li key={index}  className="list"><NavLink to={'/byCategory/'+item['id']}>{item['name']}</NavLink></li>
                        }) 
                     }
                 </ul>
 
             {props.children}
+           
         </div>
     );
 };

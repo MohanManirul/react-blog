@@ -32,4 +32,9 @@ ul li{
     list-style-type: none;
 
   }
+
+  .imgWidth{
+    max-width: 100%;
+    height: auto;
+  }
   
