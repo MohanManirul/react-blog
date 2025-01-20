@@ -22,6 +22,8 @@
     display: inline-flex;
     padding: 5px;
     margin: 10px;
+    list-style: none;
+
 }
 .list{
     list-style: none;

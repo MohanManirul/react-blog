@@ -20,7 +20,12 @@ const Layout = (props) => {
 
     return (
         <div className="container">
-           
+            
+           <ul className="listDisplay">
+                <li className="listDisplay"> <NavLink to={'/module5'}>Module 5</NavLink></li> <br />
+                <li className="listDisplay"> <NavLink to={'/module6'}>Module 6</NavLink></li> <br />
+           </ul>
+
                 <ul className="listDisplay">
                     <li > <NavLink to={'/'}>Home</NavLink></li>
                     {
