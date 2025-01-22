@@ -1,65 +1,60 @@
-import React, { useEffect, useRef, useState } from "react";
-import Layout from "../layout/layout";
-const People = [];
-const Module6 = () => {
-  const [Data, SetData] = useState([]);
-  const [name, setName] = useState("");
+import React, { useState } from "react";
 
-  useEffect(() => {
-    (async () => {
-      let response = await fetch("https://jsonplaceholder.typicode.com/posts");
-      let result = await response.json();
-      SetData(result);
-    })();
-  }, []);
-  useEffect(() => {}, [People.length]);
+function InputArrayForm() {
+  const [stringValue, setStringValue] = useState("");
+  const [dateValue, setDateValue] = useState("");
+  const [dataArray, setDataArray] = useState([]);
 
-  // current is a property
-  // ref is a attribute
-  let myHeadline = useRef();
-
-  const change = () => {
-    // myHeadline.current.innerHTML = "<ul><li>A</li><li>B</li></ul>" ;
-    // without current
-    myHeadline.innerHTML = "Hello useRef";
+  const handleSubmit = () => {
+    if (stringValue && dateValue) {
+      const newEntry = { string: stringValue, date: dateValue };
+      setDataArray([...dataArray, newEntry]); // নতুন entry array-তে যোগ করা
+      setStringValue(""); // input reset
+      setDateValue("");
+    }
   };
 
-  function handleSubmit() {
-    People.push({ name: name });
-    console.log(People);
-  }
-
   return (
-    <div>
-      <Layout>
-        <h1>People List</h1>
-        <ul>
-          {People.map((person, index) => (
-            <li key={index}>{person.name} years old</li>
-          ))}
-        </ul>
-
-        <input
-          type="text"
-          name="name"
-          onChange={(e) => setName(e.target.value)}
-        />
-        <button onClick={handleSubmit}>submit</button>
-
-        <p>Module 6 useRef </p>
-        <div>{JSON.stringify(Data)}</div>
-        <h1 ref={myHeadline}></h1>
-
-        {/* without current  */}
-
-        <h1 ref={(h1) => (myHeadline = h1)}></h1>
-        <button className="btn btn-success" onClick={change}>
-          Click
-        </button>
-        <hr />
-      </Layout>
+    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
+      <h2>Input Form</h2>
+      <div style={{ marginBottom: "10px" }}>
+        <label>
+          String Input:{" "}
+          <input
+            type="text"
+            value={stringValue}
+            onChange={(e) => setStringValue(e.target.value)}
+            placeholder="Enter a string"
+          />
+        </label>
+      </div>
+      <div style={{ marginBottom: "10px" }}>
+        <label>
+          Date Input:{" "}
+          <input
+            type="date"
+            value={dateValue}
+            onChange={(e) => setDateValue(e.target.value)}
+          />
+        </label>
+      </div>
+      <button onClick={handleSubmit} style={{ marginBottom: "10px" }}>
+        Add to Array
+      </button>
+      {dataArray.length > 0 && (
+        <div>
+          <h3>Array Data:</h3>
+          <ul>
+            {dataArray.map((item, index) => (
+              <li key={index}>
+                <strong>String:</strong> {item.string}, <strong>Date:</strong> {item.date}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
-};
+}
 
-export default Module6;
+export default InputArrayForm;
