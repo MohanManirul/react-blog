@@ -1,41 +1,24 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 
 const Module6Class2 = () => {
+  const [count, setCount] = useState(0);
+  const [otherState, setOtherState] = useState(false);
 
-    const [searchTerm, setSearchTerm] = useState("");
-    const [items] = useState([
-      "apple",
-      "banana",
-      "cherry",
-      "date",
-      "elderberry",
-      "fig",
-      "grape",
-    ]);
-  
-    // Expensive computation
-    const filteredItems = useMemo(() => {
-      console.log("Filtering items...");
-      return items.filter((item) => item.toLowerCase().includes(searchTerm.toLowerCase()));
-    }, [searchTerm, items]);
+  const expensiveCalculation = () => {
+    console.log("Running expensive calculation...");
+    return count * 2;
+  };
 
-    
-    return (
-        <div>
-            <p>Module 6 Class 2</p>
-            <input
-                type="text"
-                placeholder="Search items..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <ul>
-                {filteredItems.map((item, index) => (
-                <li key={index}>{item}</li>
-                ))}
-            </ul>
-        </div>
-    );
+  const result = expensiveCalculation();
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <p>Result: {result}</p>
+      <button onClick={() => setCount(count + 1)}>Increment Count</button>
+      <button onClick={() => setOtherState(!otherState)}>Toggle Other State</button>
+    </div>
+  );
 };
 
 export default Module6Class2;
