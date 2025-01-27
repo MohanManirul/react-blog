@@ -20,7 +20,9 @@ const Layout = (props) => {
 
     return (
         <div className="container">
-            
+             <p class="text-dark text-center mt-3">
+                Live site links will be live within 3 working days. Thank you for visiting my portfolio.
+            </p>
            <ul className="listDisplay">
                 <li className="listDisplay"> <NavLink to={'/module5'}>Module 5</NavLink></li> <br />
                 <li className="listDisplay"> <NavLink to={'/module6'}>Module 6</NavLink></li> <br />

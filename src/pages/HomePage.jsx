@@ -21,6 +21,8 @@ const HomePage = () => {
         // Layout shows the menu
         <Layout> 
             <Link to={'/module'}/>
+           
+
             {
                 list===null? <Loader /> : <BlogList list ={list} /> // shows the newest post on home page
             }
