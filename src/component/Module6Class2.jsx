@@ -1,22 +1,21 @@
-import React, { useState } from "react";
+import React from 'react';
 
 const Module6Class2 = () => {
-  const [count, setCount] = useState(0);
-  const [otherState, setOtherState] = useState(false);
-
-  const expensiveCalculation = () => {
-    console.log("Running expensive calculation...");
-    return count * 2;
-  };
-
-  const result = expensiveCalculation();
-
+      function ChildComponent({ handleClick }) {
+        return <button onClick={handleClick}>Click Me</button>;
+      }
+      
+      function ParentComponent() {
+        const handleChildClick = () => {
+          console.log("Button clicked in Child Component");
+        };
+      
+        return <ChildComponent handleClick={handleChildClick} />;
+      }
+      
   return (
     <div>
-      <p>Count: {count}</p>
-      <p>Result: {result}</p>
-      <button onClick={() => setCount(count + 1)}>Increment Count</button>
-      <button onClick={() => setOtherState(!otherState)}>Toggle Other State</button>
+      
     </div>
   );
 };

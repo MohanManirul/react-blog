@@ -1,25 +1,29 @@
-import React, { useState } from "react";
-import Module6Class2 from './../component/Module6Class2';
+import React, { useReducer } from "react";
+import ChildComponent from './../component/ChildComponent';
 
-function InputArrayForm() {
-  const [stringValue, setStringValue] = useState("");
-  const [dateValue, setDateValue] = useState("");
-  const [dataArray, setDataArray] = useState([]);
+// Reducer function
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    case "decrement":
+      return { count: state.count - 1 };
+    case "reset":
+      return { count: 0 };
+    default:
+      throw new Error("Unknown action type");
+  }
+};
 
-  const handleSubmit = () => {
-    if (stringValue && dateValue) {
-      const newEntry = { string: stringValue, date: dateValue };
-      setDataArray([...dataArray, newEntry]); // নতুন entry array-তে যোগ করা
-      setStringValue(""); // input reset
-      setDateValue("");
-    }
+const Module6 = () => {
+
+
+  const handleChildClick = () => {
+    console.log("Button clicked in Child Component");
   };
 
-  return (
-    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-      <Module6Class2 />
-    </div>
-  );
-}
+  return <ChildComponent handleClick={handleChildClick} />;
 
-export default InputArrayForm;
+};
+
+export default Module6;
