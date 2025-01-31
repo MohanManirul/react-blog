@@ -41,6 +41,7 @@ const handleSubmit = (e) => {
 
    
         <BrowserRouter>
+        
           <Routes>
             <Route path="/module5" element={<Module5/>} />
             <Route path="/module6" element={<Module6/>} />
@@ -51,6 +52,8 @@ const handleSubmit = (e) => {
             <Route path="/details/:id" element={<DetailsPage/>} />
           </Routes>
         </BrowserRouter>
+
+
     </div>
   );
 }; 

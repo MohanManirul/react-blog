@@ -1,16 +1,8 @@
 import React from 'react';
 
-const ChildComponent = ({ onIncrement }) => {
-  function ChildComponent({ onIncrement }) {
-    console.log('Child rendered');
-    
-  }
-
-  return (
-    <div>
-      return <button onClick={ChildComponent}>Increment</button>;
-    </div>
-  );
+const ChildComponent = ({ onClick }) => {
+  console.log("Button Rendered!"); // শুধুমাত্র প্রথমবার রেন্ডার হবে
+  return <button onClick={onClick}>Increase</button>;
 };
 
 export default ChildComponent;
