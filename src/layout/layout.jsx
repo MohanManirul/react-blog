@@ -27,6 +27,12 @@ const Layout = (props) => {
                 <li className="listDisplay"> <NavLink to={'/module5'}>Module 5</NavLink></li> <br />
                 <li className="listDisplay"> <NavLink to={'/module6'}>Module 6</NavLink></li> <br />
                 <li className="listDisplay"> <NavLink to={'/usecallback'}>Use call back hook</NavLink></li> <br />
+                <li className="listDisplay"> <NavLink to={'/useRef'}>useRef hook</NavLink></li> <br />
+                <li className="listDisplay"> <NavLink to={'/storeMutableValue'}>useRef hook ( storeMutableValue Timer Example)</NavLink></li> <br />
+
+                <li className="listDisplay"> <NavLink to={'/conditionInsideHook'}>conditions Inside Hook</NavLink></li> <br />
+
+                
            </ul>
 
                 <ul className="listDisplay">

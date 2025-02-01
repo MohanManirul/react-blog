@@ -6,11 +6,16 @@ import React, { useState } from 'react';
 import Module6 from "./pages/Module6.jsx";
 import Module5 from './pages/Module5';
 import UseCallBackFunc from "./pages/UseCallBackFunc.jsx";
+import UseRef from "./pages/UseRef.jsx";
+import Timer from "./pages/Timer.jsx";
+import MyComponent from "./component/MyComponent.jsx";
+
 
 
 
 const App = () => {
 
+  const [isEnabled, setIsEnabled] = useState(false);
 
   const [FormData , setFormData] = useState({
     username : "",
@@ -39,13 +44,28 @@ const handleSubmit = (e) => {
   return (
     <div>
 
+
+
+      <h2>Parent Component</h2>
+      <button onClick={() => setIsEnabled(!isEnabled)}>
+        Toggle isEnabled
+      </button>
+      <MyComponent isEnabled={isEnabled} />
    
+
+
+
+
         <BrowserRouter>
         
           <Routes>
             <Route path="/module5" element={<Module5/>} />
             <Route path="/module6" element={<Module6/>} />
             <Route path="/usecallback" element={<UseCallBackFunc/>} />
+            <Route path="/useRef" element={<UseRef/>} />
+            <Route path="/storeMutableValue" element={<Timer/>} />
+
+         
             
             <Route path="/" element={<HomePage/>} />
             <Route path="/byCategory/:id" element={<ByCategoryPage/>} />
