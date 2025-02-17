@@ -40,6 +40,7 @@ export async function postList(id){
 // post deatails
 export async function postDetails(id){
     let res = await axios.get(BaseURL+"/post-details/"+id);
+  
     if(res.status ===200){
         return res.data;
     }else{

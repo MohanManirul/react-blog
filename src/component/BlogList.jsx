@@ -15,10 +15,10 @@ const BlogList = (props) => {
                         <div key={index} className="cardPadding col-md-4">
 
                         <Link   key={index.toString()} to={"/details/"+item['id']} className="card">
-                            <figure><img className="imgWidth"  src={item['img']} /></figure> 
+                            <figure><img className="imgWidth"  src={item['image']} /></figure> 
                             <div className="card-body">
                                 <h2 className="card-title">{item['title']}</h2>
-                                <p>{item['short']}</p>
+                                <p>{item['descriptions']}</p>
                             </div>
                         </Link>
                         </div>

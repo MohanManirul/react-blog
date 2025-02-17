@@ -9,10 +9,13 @@ import BlogDetails from "../component/BlogDetails.jsx";
 const DetailsPage = () => {
     let {id} = useParams();
     const [list , setList] = useState(null);
+    
+    
     useEffect(()=> {
         (async()=> {
             let res = await postDetails(id);
-            setList(res);
+                   
+            setList(res.data);
         })()
     },[id])
 
