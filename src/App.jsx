@@ -16,6 +16,7 @@ const App = () => {
             <Route path="/byCategory/:id" element={<ByCategoryPage/>} />
             <Route path="/details/:id" element={<DetailsPage/>} />
           </Routes>
+          
         </BrowserRouter>
 
 

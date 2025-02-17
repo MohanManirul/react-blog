@@ -9,7 +9,11 @@ import Loader from "../component/Loader.jsx";
 
 const ByCategoryPage = () => {
     let {id} = useParams();
+     
     const [list , setList] = useState([]);
+  
+ 
+    
     useEffect(()=>{
 
         (async () => {

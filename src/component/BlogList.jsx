@@ -2,11 +2,10 @@ import { Link } from "react-router-dom";
 
 
 const BlogList = (props) => {
-    
+       
 
     const BaseURL = import.meta.env.VITE_IMG_URL
 
-    
 
     return (
                  
