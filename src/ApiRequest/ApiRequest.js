@@ -1,11 +1,13 @@
 import axios from 'axios';
 
-const BaseURL = "https://basic-blog.teamrabbil.com/api"
+const BaseURL = "http://inertia-pos.manirul.xyz/api"
 
 
 //show menu on header
 export async function postCategories(){
-    let res = await axios.get(BaseURL+"/post-categories");
+    let res = await axios.get(BaseURL+"/post-category-list");
+ 
+    
     if(res.status ===200){
         return res.data;
     }else{
@@ -26,7 +28,7 @@ export async function postNewest(){
 
 // show category wise post list
 export async function postList(id){
-    let res = await axios.get(BaseURL+"/post-list/"+id);
+    let res = await axios.get(BaseURL+"/post-by-category/"+id);
     if(res.status ===200){
         return res.data;
     }else{

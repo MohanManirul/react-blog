@@ -14,7 +14,7 @@ const ByCategoryPage = () => {
 
         (async () => {
             let res = await postList(id);
-            setList(res);
+            setList(res.data);
         })()
 
     },[id])

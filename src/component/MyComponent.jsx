@@ -1,6 +1,9 @@
 import React from "react";
 
 function MyComponent({ isEnabled }) {
+  
+ 
+
   return (
     <div>
       <h3>Child Component</h3>

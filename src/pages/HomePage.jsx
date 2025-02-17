@@ -13,7 +13,7 @@ const HomePage = () => {
     useEffect( ()=>{
         (async()=>{
             let res = await postNewest();
-            setList(res)
+            setList(res.data)
         })()
     },[])
 
