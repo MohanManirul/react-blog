@@ -6,7 +6,6 @@ const BaseURL = "http://inertia-pos.manirul.xyz/api"
 //show menu on header
 export async function postCategories(){
     let res = await axios.get(BaseURL+"/post-category-list");
- 
     
     if(res.status ===200){
         return res.data;
