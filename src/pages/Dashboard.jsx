@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
         <div>
             <p>Welcome to dashboard</p>
             <nav>
+                <li > <NavLink to={'/'}>Home</NavLink></li> 
                 <Link to="profile">Profile</Link> |
                 <Link to="settings">Settings</Link>
             </nav>
