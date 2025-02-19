@@ -24,7 +24,8 @@ const Layout = (props) => {
         <div className="container">          
            
                 <ul className="listDisplay">
-                    <li > <NavLink to={'/'}>Home</NavLink></li>
+                    <li > <NavLink to={'/'}>Home</NavLink></li> |
+                    <li > <NavLink to={'/dashboard'}>Dashboard</NavLink></li>
                     {
                        categories.map((item,index) => {
                         return <li key={index}  className="list"><NavLink to={'/byCategory/'+item['id']}>{item['name']}</NavLink></li>
