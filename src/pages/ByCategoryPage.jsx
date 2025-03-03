@@ -12,7 +12,7 @@ const ByCategoryPage = () => {
      
     const [list , setList] = useState([]);
   
- 
+  
     
     useEffect(()=>{
 
@@ -22,10 +22,10 @@ const ByCategoryPage = () => {
         })()
 
     },[id])
-
+ 
     return (
         <div>
-            
+             
             <Layout>
                 {
                     list === null? <Loader />: <BlogList list={list}/>

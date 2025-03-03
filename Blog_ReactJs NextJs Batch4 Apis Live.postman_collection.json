@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "d0d731a9-3cce-48b2-a916-204ba0397ec0",
+		"name": "ReactJs NextJs Batch4 Apis Live",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6229600"
+	},
+	"item": [
+		{
+			"name": "create-post-category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "{{token}}",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1efed448-7027-4920-ace3-743cba53733a"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/create-post-category",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"create-post-category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-category-list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/post-category-list",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"post-category-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-newest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/post-newest",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"post-newest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "algorithmic problem-solving techniques",
+							"type": "text"
+						},
+						{
+							"key": "descriptions",
+							"value": "A deep dive into algorithmic problem-solving techniques to tackle coding challenges. Understand problem breakdown, logical reasoning, and code optimization.",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/F:/desktop30-11-2024/dummy images/flipmart.png"
+						},
+						{
+							"key": "post_category_id",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/post-create",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"post-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/post-details/6",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"post-details",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-by-category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/post-by-category/10",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"post-by-category",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

@@ -40,7 +40,7 @@ const Form = () => {
                 value="Male"
                 checked={FormData.gender === "Male"}
                 onChange={handleChange}
-                /> Male
+                /> Male / Female
 
                 </label>
 
